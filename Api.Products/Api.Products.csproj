@@ -10,11 +10,15 @@
     <None Remove="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" />
     <None Remove="Swashbuckle.AspNetCore" />
     <None Remove="HealthChecks\" />
+    <None Remove="Microsoft.Extensions.Logging" />
+    <None Remove="Dtos\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Api.Common\Api.Common.csproj">
@@ -23,5 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HealthChecks\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

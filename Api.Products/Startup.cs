@@ -14,9 +14,14 @@ using Microsoft.Extensions.Logging;
 using Api.Common.Middlewares;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Api.Products.HealthChecks;
+using Api.Products.Services;
 
 namespace Api.Products
 {
+	/// <summary>
+	/// NB: Should create a basic startup to handle some common things,
+	/// but not implemented in this code test
+	/// </summary>
 	public class Startup
 	{
 		public Startup(IConfiguration configuration)
@@ -29,6 +34,8 @@ namespace Api.Products
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddTransient<IProductProvider, ProductProvider>();
+
 			services.AddControllers();
 			services.AddHealthChecks();
 
