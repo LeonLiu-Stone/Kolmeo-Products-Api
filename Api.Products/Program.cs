@@ -13,11 +13,21 @@ namespace Api.Products
 	{
 		public static void Main(string[] args)
 		{
-			CreateHostBuilder(args).Build().Run();
+			try
+			{
+				CreateHostBuilder(args).Build().Run();
+			}
+			catch (Exception ex) {
+				Console.WriteLine($"An unknown error: {ex.Message}");
+			}
 		}
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>
 				Host.CreateDefaultBuilder(args)
+						.ConfigureLogging(logging =>
+						{
+							logging.AddConsole();
+						})
 						.ConfigureWebHostDefaults(webBuilder =>
 						{
 							webBuilder.UseStartup<Startup>();
