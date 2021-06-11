@@ -13,12 +13,23 @@
     <None Remove="Microsoft.Extensions.Logging" />
     <None Remove="Dtos\" />
     <None Remove="Services\" />
+    <None Remove="Entities\" />
+    <None Remove="DataContexts\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Api.Common\Api.Common.csproj">
@@ -29,5 +40,7 @@
     <Folder Include="HealthChecks\" />
     <Folder Include="Dtos\" />
     <Folder Include="Services\" />
+    <Folder Include="Entities\" />
+    <Folder Include="DataContexts\" />
   </ItemGroup>
 </Project>
